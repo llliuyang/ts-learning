@@ -1,6 +1,6 @@
 ## Typescript进阶训练
 
-感谢珠峰架构组织的本次TS进阶训练和痞老板的教学与解惑。
+感谢珠峰架构组织的本次TS进阶训练和韦同学的教学与解惑。
 
 ### 学习资料
 
@@ -13,7 +13,7 @@
 
 本部分主要是学习对字符串的处理，学习使用TS解决基础问题的一些思路与方法。
 
-视频地址：[`💖哔哩哔哩- 痞老板很pi`](https://www.bilibili.com/video/BV1EY411s7EY) <br />
+视频地址：[`💖哔哩哔哩 - 痞老板很pi`](https://www.bilibili.com/video/BV1EY411s7EY) <br />
 题目地址：[`🎈刷起来`](https://www.wolai.com/aE1oVmBGkgqPhzQcwmRuJU) 或者参考下面 `题目列表`
 
 #### 题目列表
@@ -21,9 +21,8 @@
 <details>
 <summary>1. CapitalizeString</summary>
 
-> 首字母大写
-
 ```TypeScript
+// 首字母大写
 type a1 = CapitalizeString<'handler'>       // Handler
 type a2 = CapitalizeString<'parent'>        // Parent
 type a3 = CapitalizeString<233>             // 233
@@ -33,9 +32,8 @@ type a3 = CapitalizeString<233>             // 233
 <details>
 <summary>2. FirstChar</summary>
 
-> 获取字符串字面量中的第一个字符
-
 ```TypeScript
+// 获取字符串字面量中的第一个字符
 type A = FirstChar<'BFE'> // 'B'
 type B = FirstChar<'dev'> // 'd'
 type C = FirstChar<''> // never
@@ -45,9 +43,8 @@ type C = FirstChar<''> // never
 <details>
 <summary>3. LastChar</summary>
 
-> 获取字符串字面量中的最后一个字符
-
 ```TypeScript
+// 获取字符串字面量中的最后一个字符
 type A = LastChar<'BFE'> // 'E'
 type B = LastChar<'dev'> // 'v'
 type C = LastChar<''> // never
@@ -57,9 +54,8 @@ type C = LastChar<''> // never
 <details>
 <summary>4. StringToTuple</summary>
 
-> 字符串转换为元组类型
-
 ```TypeScript
+//字符串转换为元组类型
 type A = StringToTuple<'BFE.dev'> // ['B', 'F', 'E', '.', 'd', 'e','v']
 type B = StringToTuple<''> // []
 ```
@@ -68,9 +64,8 @@ type B = StringToTuple<''> // []
 <details>
 <summary>5. TupleToString</summary>
 
-> 将字符串类型的元素转换为字符串字面量类型
-
 ```TypeScript
+// 将字符串类型的元素转换为字符串字面量类型
 type A = StringToTuple<'BFE.dev'> // ['B', 'F', 'E', '.', 'd', 'e','v']
 type B = StringToTuple<''> // []
 ```
@@ -79,9 +74,8 @@ type B = StringToTuple<''> // []
 <details>
 <summary>6. RepeatString &lt;T,C&gt;</summary>
 
-> 复制字符T为字符串类型，长度为C
-
 ```TypeScript
+// 复制字符T为字符串类型，长度为C
 type A = RepeatString<'a', 3> // 'aaa'
 type B = RepeatString<'a', 0> // ''
 ```
@@ -90,9 +84,9 @@ type B = RepeatString<'a', 0> // ''
 <details>
 <summary>7. SplitString</summary>
 
-> 将字符串字面量类型按照指定字符，分割为元组。无法分割则返回原字符串字面量
-
 ```TypeScript
+// 将字符串字面量类型按照指定字符，分割为元组
+// 无法分割则返回原字符串字面量
 type A1 = SplitString<'handle-open-flag', '-'>        // ["handle", "open", "flag"]
 type A2 = SplitString<'open-flag', '-'>               // ["open", "flag"]
 type A3 = SplitString<'handle.open.flag', '.'>        // ["handle", "open", "flag"]
@@ -104,9 +98,8 @@ type A5 = SplitString<'open.flag', '-'>               // ["open.flag"]
 <details>
 <summary>8. LengthOfString</summary>
 
-> 计算字符串字面量类型的长度
-
 ```TypeScript
+// 计算字符串字面量类型的长度
 type A = LengthOfString<'BFE.dev'> // 7
 type B = LengthOfString<''> // 0
 ```
@@ -115,9 +108,8 @@ type B = LengthOfString<''> // 0
 <details>
 <summary>9. KebabCase</summary>
 
-> 驼峰命名转横杠命名
-
 ```TypeScript
+// 驼峰命名转横杠命名
 type a1 = KebabCase<'HandleOpenFlag'>           // handle-open-flag
 type a2 = KebabCase<'OpenFlag'>                 // open-flag
 ```
@@ -126,9 +118,8 @@ type a2 = KebabCase<'OpenFlag'>                 // open-flag
 <details>
 <summary>10. CamelCase</summary>
 
-> 横杠命名转化为驼峰命名
-
 ```TypeScript
+// 横杠命名转化为驼峰命名
 type a1 = CamelCase<'handle-open-flag'>         // HandleOpenFlag
 type a2 = CamelCase<'open-flag'>                // OpenFlag
 ```
@@ -137,25 +128,24 @@ type a2 = CamelCase<'open-flag'>                // OpenFlag
 <details>
 <summary>11. ObjectAccessPaths</summary>
 
-> 得到对象中的值访问字符串
-
 ```TypeScript
+// 得到对象中的值访问字符串
 // 简单来说，就是根据如下对象类型：
 /*
 {
-    home: {
-        topBar: {
-            title: '顶部标题',
-            welcome: '欢迎登录'
-        },
-        bottomBar: {
-            notes: 'XXX备案，归XXX所有',
-        },
+  home: {
+    topBar: {
+      title: '顶部标题',
+      welcome: '欢迎登录'
     },
-    login: {
-        username: '用户名',
-        password: '密码'
-    }
+    bottomBar: {
+      notes: 'XXX备案，归XXX所有',
+    },
+  },
+  login: {
+    username: '用户名',
+    password: '密码'
+  }
 }
 */
 // 得到联合类型：
@@ -174,8 +164,8 @@ const i18n = createI18n({
 			welcome: '欢迎登录'
 		},
 		bottomBar: {
-			notes: 'XXX备案，归XXX所有',
-		},
+			notes: 'XXX备案，归XXX所有'
+		}
 	},
 	login: {
 		username: '用户名',
@@ -195,9 +185,8 @@ i18n('home.bottomBar.notes')        // correct
 <details>
 <summary>12. ComponentEmitsType</summary>
 
-> 定义组件的监听事件类型
-
 ```TypeScript
+// 定义组件的监听事件类型
 // 实现 ComponentEmitsType<Emits> 类型，将
 /*
 {
@@ -251,3 +240,6 @@ console.log(<Comp name="" age={1} flag id="111"/>)  // 正确
 ```
 </details>
 
+#### 总结
+
+> 在字符串的操作中，要善于对字符串进行结构拆分，对于infer的使用要熟稔于心。对于有数字类型的操作与计算中，要首先想到借助元组的长度来解决问题。使用递归的过程中，要理清递归时需要传递的参数。最后切记收尾工作，清理掉我们不需要的一些符号等元素。
