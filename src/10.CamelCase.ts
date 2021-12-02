@@ -5,7 +5,7 @@ export default {}
  */
 
 // 方法一
-type CamelCase1<T extends string, S extends string = ''> = T extends `${infer L}-${infer R1}${infer R2}` ? CamelCase1<R2, `${S}${L}${Uppercase<R1>}`> : Capitalize<`${S}${T}`>
+export type CamelCase1<T extends string, S extends string = ''> = T extends `${infer L}-${infer R1}${infer R2}` ? CamelCase1<R2, `${S}${L}${Uppercase<R1>}`> : Capitalize<`${S}${T}`>
 
 // 方法二
 type CamelCase2<T extends string, S extends string = ''> = T extends `${infer L}-${infer R}` ? CamelCase2<R, `${S}${Capitalize<L>}`> : `${S}${Capitalize<T>}`
