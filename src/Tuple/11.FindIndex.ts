@@ -6,7 +6,7 @@ export default {}
  * 题十一：找出E类型在元组类型T中的下标
  */
 
-type FindIndex<T extends any[], E, A extends any[] = []> = T extends [infer L, ...infer R] ? (
+export type FindIndex<T extends any[], E, A extends any[] = []> = T extends [infer L, ...infer R] ? (
 	Equal<L, E> extends true ? A['length'] : FindIndex<R, E, [...A, null]>
 	) : never
 
