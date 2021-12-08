@@ -2,8 +2,7 @@
 
 本部分主要是学习对字符串的处理，学习使用TS解决基础问题的一些思路与方法。
 
-视频地址：[`💖哔哩哔哩 - 痞老板很pi`](https://www.bilibili.com/video/BV1EY411s7EY) <br />
-题目地址：[`🎈刷起来`](https://www.wolai.com/aE1oVmBGkgqPhzQcwmRuJU) 或者参考下面 `题目列表`
+视频地址：[`💖字符串`](https://www.bilibili.com/video/BV1EY411s7EY) <br />
 
 ### 题目列表
 

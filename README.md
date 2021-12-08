@@ -13,6 +13,12 @@
 
 本部分主要是学习对字符串的处理，学习使用TS解决基础问题的一些思路与方法。
 
-视频地址：[`💖哔哩哔哩 - 痞老板很pi`](https://www.bilibili.com/video/BV1EY411s7EY) <br />
-题目地址：[`🎈刷起来`](https://www.wolai.com/aE1oVmBGkgqPhzQcwmRuJU) 或者查看 [`🍭字符串`](src/String/README.md)
+视频地址：[`💖字符串`](https://www.bilibili.com/video/BV1EY411s7EY) <br />
+题目地址：查看 [`🍭字符串`](src/String/README.md)
 
+### 第二部分：元组
+
+本部分着重锻炼对于元组类型的操作,加深对于元组长度的应用。
+
+视频地址：[`💖元组`](https://www.bilibili.com/video/BV1db4y1B7ca) <br />
+题目地址：查看 [`🍭元组`](src/Tuple/README.md)
