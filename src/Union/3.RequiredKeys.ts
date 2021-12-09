@@ -7,7 +7,7 @@ export default {}
  */
 
 // 方法一
-type RequiredKeys<T, K = keyof T> = K extends keyof T ? (
+export type RequiredKeys<T, K = keyof T> = K extends keyof T ? (
 	undefined extends ExcludeUndefined<T>[K] ? never : K
 	) : never
 // 方法二
