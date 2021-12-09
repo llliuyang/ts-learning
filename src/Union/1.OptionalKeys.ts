@@ -4,9 +4,9 @@ export default {}
  * 题一：获取对象类型中的可选属性的联合类型
  */
 
-type ExcludeUndefined<T> = { [K in keyof T]: Exclude<T[K], undefined> }
+export type ExcludeUndefined<T> = { [K in keyof T]: Exclude<T[K], undefined> }
 //  方法一
-type OptionalKeys<T, K = keyof T> = K extends keyof T ? (
+export type OptionalKeys<T, K = keyof T> = K extends keyof T ? (
 	undefined extends ExcludeUndefined<T>[K] ? K : never
 	) : never
 // 方法二
