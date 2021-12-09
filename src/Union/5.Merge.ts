@@ -43,4 +43,5 @@ console.log(a.el.scrollTop, a.age.toFixed(0), a.flag.valueOf())
  * 先将T中属于K中的键值对去掉
  * 然后再将去掉后的对象类型与原K类型组合
  * 直接使用Omit再组合也行：Omit<T,keyof K> & K
+ * 关于为什么对象的交集是对象的联合，参阅https://stackoverflow.com/questions/59722333/union-and-intersection-of-types
  */
